@@ -13,6 +13,7 @@ public class UserServiceImpl implements UserService {
     public void createUsersTable() {
         userDao.createUsersTable();
         System.out.println("Таблица Users создана.");
+        
     }
 
     public void dropUsersTable() {
