@@ -15,18 +15,6 @@ public class Util {
     private static final String USER = "postgres";
     private static final String PASSWORD = "000";
 
-    private static Connection con;
-
-    public static Connection getConnection() {
-        try {
-            if(con != null && !con.isClosed()) return con;
-            con = DriverManager.getConnection(URL, USER, PASSWORD);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return con;
-    }
-
     private static SessionFactory sessionFactory;
     public static SessionFactory getSessionFactory() {
         if(sessionFactory != null) { return sessionFactory; }
